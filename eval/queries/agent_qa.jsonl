@@ -1,0 +1,3 @@
+{"id": "m001", "question": "When did I last shoot the Columbus skyline?", "kind": "freeform", "expected": "", "manual": true}
+{"id": "m002", "question": "What was my most photographed city in 2025?", "kind": "short", "expected": "", "manual": true}
+{"id": "m003", "question": "Show my best sunset from each trip this year", "kind": "freeform", "expected": "", "manual": true}

@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# secrets and local config
+.env
+
+# runtime data (Docker bind mounts, backups, experiment tracking)
+/data/
+/backups/
+/empty-import/
+*.dump
+mlflow.db
+mlruns/
+
+# eval labels that contain people's names or photo paths from your library
+eval/queries/face_labels.csv
+eval/queries/dup_pairs.csv
+
+web/node_modules/
+web/dist/
+web/dev-dist/

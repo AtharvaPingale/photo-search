@@ -1,0 +1,5732 @@
+{
+  "kind": "parser",
+  "created_at": "20260926-151517",
+  "git_commit": "unknown",
+  "results": [
+    {
+      "parser": "rules",
+      "n": 62,
+      "field_accuracy": 0.9764705882352941,
+      "exact_match": 0.967741935483871,
+      "semantic_f1": 0.9462365591397849,
+      "latency_p50_ms": 0.11344649999500689,
+      "latency_p95_ms": 0.2016719999957672,
+      "fields": {
+        "date_from": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "date_to": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "months": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "place": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8666666666666667,
+          "support": 15
+        },
+        "camera": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lens": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "focal_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "focal_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "aperture_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "aperture_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "iso_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "iso_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "people": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 6
+        },
+        "media": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "orientation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "rows": [
+        {
+          "query": "dog on a beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "dog on a beach",
+          "semantic_got": "dog on a beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "golden hour on the beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden hour on the beach",
+          "semantic_got": "golden hour on the beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "moody night street",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "moody night street",
+          "semantic_got": "moody night street",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "red car",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "red car",
+          "semantic_got": "red car",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "photos from Chicago in 2025",
+          "expected": {
+            "place": "Chicago",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Chicago"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "portraits with the 85mm",
+          "expected": {
+            "lens": "85mm"
+          },
+          "got": {
+            "lens": "85mm"
+          },
+          "semantic_expected": "portraits",
+          "semantic_got": "portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "street shots at night with the 35mm",
+          "expected": {
+            "lens": "35mm"
+          },
+          "got": {
+            "lens": "35mm"
+          },
+          "semantic_expected": "street shots at night",
+          "semantic_got": "street shots at night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "me and Rohan hiking",
+          "expected": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "me"
+            ]
+          },
+          "semantic_expected": "hiking",
+          "semantic_got": "hiking",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sunset last summer",
+          "expected": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "sunset",
+          "semantic_got": "sunset",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "snow in winter 2024",
+          "expected": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "semantic_expected": "snow",
+          "semantic_got": "snow",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Tokyo at night on the X100V",
+          "expected": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "got": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "semantic_expected": "at night",
+          "semantic_got": "night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "temples in Kyoto",
+          "expected": {
+            "place": "Kyoto"
+          },
+          "got": {
+            "place": "Kyoto"
+          },
+          "semantic_expected": "temples",
+          "semantic_got": "temples",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Mom's birthday cake",
+          "expected": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "got": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "birthday cake",
+          "semantic_got": "birthday cake",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Priya laughing",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "laughing",
+          "semantic_got": "laughing",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Columbus skyline",
+          "expected": {
+            "place": "Columbus"
+          },
+          "got": {
+            "place": "Columbus"
+          },
+          "semantic_expected": "skyline",
+          "semantic_got": "skyline",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "aerial shots from the drone",
+          "expected": {
+            "camera": "DJI"
+          },
+          "got": {
+            "camera": "dji"
+          },
+          "semantic_expected": "aerial shots",
+          "semantic_got": "aerial shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "birds with the 100-400",
+          "expected": {
+            "lens": "100-400"
+          },
+          "got": {
+            "lens": "100-400"
+          },
+          "semantic_expected": "birds",
+          "semantic_got": "birds",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "wildlife at 400mm",
+          "expected": {
+            "focal_min": 380,
+            "focal_max": 420
+          },
+          "got": {
+            "focal_min": 380.0,
+            "focal_max": 420.0
+          },
+          "semantic_expected": "wildlife",
+          "semantic_got": "wildlife",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "bokeh portraits at f/1.8",
+          "expected": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "got": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "semantic_expected": "bokeh portraits",
+          "semantic_got": "bokeh portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "concert photos at iso 6400",
+          "expected": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "got": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "semantic_expected": "concert",
+          "semantic_got": "concert",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "high iso night shots",
+          "expected": {
+            "iso_min": 3200
+          },
+          "got": {
+            "iso_min": 3200
+          },
+          "semantic_expected": "night shots",
+          "semantic_got": "night shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "fireworks July 2025",
+          "expected": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "got": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "semantic_expected": "fireworks",
+          "semantic_got": "fireworks",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "fall foliage in October",
+          "expected": {
+            "months": [
+              10
+            ]
+          },
+          "got": {
+            "months": [
+              10
+            ]
+          },
+          "semantic_expected": "fall foliage",
+          "semantic_got": "fall foliage",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "beach photos from summer",
+          "expected": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "got": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "semantic_expected": "beach",
+          "semantic_got": "beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "christmas 2024",
+          "expected": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "got": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "christmas tree",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "christmas tree",
+          "semantic_got": "christmas tree",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "may flowers",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "may flowers",
+          "semantic_got": "may flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "flowers in May 2023",
+          "expected": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "got": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "semantic_expected": "flowers",
+          "semantic_got": "flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "food last month",
+          "expected": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "food",
+          "semantic_got": "food",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "anything from yesterday",
+          "expected": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "got": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "anything",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "this week",
+          "expected": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "coffee shops in Lisbon last year",
+          "expected": {
+            "place": "Lisbon",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Lisbon"
+          },
+          "semantic_expected": "coffee shops",
+          "semantic_got": "coffee shops",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Paris trip 2019",
+          "expected": {
+            "place": "Paris",
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31"
+          },
+          "got": {
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31",
+            "place": "Paris"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "trip",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "hikes between 2020 and 2022",
+          "expected": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "got": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "semantic_expected": "hikes",
+          "semantic_got": "hikes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "mountains since 2023",
+          "expected": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "mountains",
+          "semantic_got": "mountains",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "videos of the waves",
+          "expected": {
+            "media": "video"
+          },
+          "got": {
+            "media": "video"
+          },
+          "semantic_expected": "waves",
+          "semantic_got": "waves",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "vertical shots of buildings",
+          "expected": {
+            "orientation": "portrait"
+          },
+          "got": {
+            "orientation": "portrait"
+          },
+          "semantic_expected": "buildings",
+          "semantic_got": "buildings",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "shot on iphone in San Francisco",
+          "expected": {
+            "camera": "iphone",
+            "place": "San Francisco"
+          },
+          "got": {
+            "place": "San Francisco",
+            "camera": "iphone"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "golden gate bridge in fog",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden gate bridge in fog",
+          "semantic_got": "golden gate bridge in fog",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "trip to Golden Colorado",
+          "expected": {
+            "place": "Golden"
+          },
+          "got": {
+            "place": "Colorado"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "trip to Golden",
+          "wrong_fields": [
+            "place"
+          ],
+          "semantic_f1": 0.5,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "lake tahoe kayaking",
+          "expected": {
+            "place": "South Lake Tahoe"
+          },
+          "got": {},
+          "semantic_expected": "kayaking",
+          "semantic_got": "lake tahoe kayaking",
+          "wrong_fields": [
+            "place"
+          ],
+          "semantic_f1": 0.5,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "New York City subway",
+          "expected": {
+            "place": "New York City"
+          },
+          "got": {
+            "place": "New York City"
+          },
+          "semantic_expected": "subway",
+          "semantic_got": "subway",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sushi in Japan",
+          "expected": {
+            "place": "Japan"
+          },
+          "got": {
+            "place": "Japan"
+          },
+          "semantic_expected": "sushi",
+          "semantic_got": "sushi",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Ohio state fair",
+          "expected": {
+            "place": "Ohio"
+          },
+          "got": {
+            "place": "Ohio"
+          },
+          "semantic_expected": "state fair",
+          "semantic_got": "state fair",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Rohan and Priya at the wedding",
+          "expected": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "semantic_expected": "wedding",
+          "semantic_got": "wedding",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "selfies with Mom in Chicago",
+          "expected": {
+            "people": [
+              "Mom"
+            ],
+            "place": "Chicago"
+          },
+          "got": {
+            "place": "Chicago",
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "selfies",
+          "semantic_got": "selfies",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sigma lens close ups",
+          "expected": {
+            "lens": "sigma"
+          },
+          "got": {
+            "lens": "sigma"
+          },
+          "semantic_expected": "close ups",
+          "semantic_got": "close ups",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "landscapes with the 24-70 in 2024",
+          "expected": {
+            "lens": "24-70",
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31"
+          },
+          "got": {
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31",
+            "lens": "24-70"
+          },
+          "semantic_expected": "landscapes",
+          "semantic_got": "landscapes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "canon photos of my cat",
+          "expected": {
+            "camera": "canon"
+          },
+          "got": {
+            "camera": "canon"
+          },
+          "semantic_expected": "cat",
+          "semantic_got": "cat",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "last weekend at the park",
+          "expected": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "got": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "semantic_expected": "park",
+          "semantic_got": "park",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "photos from the past 2 weeks",
+          "expected": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "from",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "snowboarding last winter",
+          "expected": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "got": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "semantic_expected": "snowboarding",
+          "semantic_got": "snowboarding",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "cherry blossoms this spring",
+          "expected": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "got": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "semantic_expected": "cherry blossoms",
+          "semantic_got": "cherry blossoms",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "halloween 2025 costumes",
+          "expected": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "got": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "semantic_expected": "costumes",
+          "semantic_got": "costumes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "thanksgiving dinner last year",
+          "expected": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "got": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "semantic_expected": "dinner",
+          "semantic_got": "dinner",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "a menu with prices",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "a menu with prices",
+          "semantic_got": "a menu with prices",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "street signs in Japanese",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "street signs in japanese",
+          "semantic_got": "street signs in Japanese",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "black and white portraits of Priya",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "black and white portraits",
+          "semantic_got": "black and white portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sony a7iii astro",
+          "expected": {
+            "camera": "sony"
+          },
+          "got": {
+            "camera": "sony"
+          },
+          "semantic_expected": "astro",
+          "semantic_got": "a7iii astro",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "wide angle interiors under 24mm",
+          "expected": {
+            "focal_max": 24
+          },
+          "got": {
+            "focal_max": 24.0
+          },
+          "semantic_expected": "wide angle interiors",
+          "semantic_got": "wide angle interiors",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "June 2024 in California",
+          "expected": {
+            "place": "California",
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30"
+          },
+          "got": {
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30",
+            "place": "California"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "rainy days in Portugal",
+          "expected": {
+            "place": "Portugal"
+          },
+          "got": {
+            "place": "Portugal"
+          },
+          "semantic_expected": "rainy days",
+          "semantic_got": "rainy days",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        }
+      ],
+      "mlflow_run_id": "7255b4cd8bdc4fdebf92a2a39286f1c1"
+    },
+    {
+      "parser": "llm_raw",
+      "n": 62,
+      "field_accuracy": 0.36419753086419754,
+      "exact_match": 0.08064516129032258,
+      "semantic_f1": 0.7661290322580645,
+      "latency_p50_ms": 1807.9203329999984,
+      "latency_p95_ms": 2007.0896610500029,
+      "fields": {
+        "date_from": {
+          "precision": 0.5833333333333334,
+          "recall": 0.6666666666666666,
+          "support": 21
+        },
+        "date_to": {
+          "precision": 0.5909090909090909,
+          "recall": 0.6190476190476191,
+          "support": 21
+        },
+        "months": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 2
+        },
+        "place": {
+          "precision": 0.38095238095238093,
+          "recall": 0.5333333333333333,
+          "support": 15
+        },
+        "camera": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lens": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "support": 5
+        },
+        "focal_min": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "support": 1
+        },
+        "focal_max": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "support": 2
+        },
+        "aperture_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "aperture_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "iso_min": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "support": 2
+        },
+        "iso_max": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 1
+        },
+        "people": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "support": 6
+        },
+        "media": {
+          "precision": 0.01818181818181818,
+          "recall": 1.0,
+          "support": 1
+        },
+        "orientation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "rows": [
+        {
+          "query": "dog on a beach",
+          "expected": {},
+          "got": {
+            "media": "photo"
+          },
+          "semantic_expected": "dog on a beach",
+          "semantic_got": "dog on a beach",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden hour on the beach",
+          "expected": {},
+          "got": {
+            "place": "beach",
+            "media": "photo"
+          },
+          "semantic_expected": "golden hour on the beach",
+          "semantic_got": "golden hour on the beach",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "moody night street",
+          "expected": {},
+          "got": {
+            "media": "photo"
+          },
+          "semantic_expected": "moody night street",
+          "semantic_got": "moody night street",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "red car",
+          "expected": {},
+          "got": {
+            "media": "photo"
+          },
+          "semantic_expected": "red car",
+          "semantic_got": "red car",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from Chicago in 2025",
+          "expected": {
+            "place": "Chicago",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Chicago",
+            "media": "photo"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "portraits with the 85mm",
+          "expected": {
+            "lens": "85mm"
+          },
+          "got": {
+            "lens": "85mm",
+            "focal_min": 85.0,
+            "focal_max": 85.0,
+            "media": "photo"
+          },
+          "semantic_expected": "portraits",
+          "semantic_got": "portraits",
+          "wrong_fields": [
+            "focal_min",
+            "focal_max",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street shots at night with the 35mm",
+          "expected": {
+            "lens": "35mm"
+          },
+          "got": {
+            "camera": "Fujifilm X100V",
+            "lens": "Sigma 35mm F1.4 DG HSM",
+            "media": "photo"
+          },
+          "semantic_expected": "street shots at night",
+          "semantic_got": "street shots at night",
+          "wrong_fields": [
+            "media",
+            "camera"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "me and Rohan hiking",
+          "expected": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "got": {
+            "people": [
+              "me",
+              "Rohan"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "hiking",
+          "semantic_got": "hiking",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sunset last summer",
+          "expected": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2025-06-01",
+            "date_to": "2025-08-31",
+            "media": "photo"
+          },
+          "semantic_expected": "sunset",
+          "semantic_got": "sunset",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snow in winter 2024",
+          "expected": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28",
+            "media": "photo"
+          },
+          "semantic_expected": "snow",
+          "semantic_got": "snow",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Tokyo at night on the X100V",
+          "expected": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "got": {
+            "place": "Tokyo, Japan",
+            "camera": "Fujifilm X100V",
+            "media": "photo"
+          },
+          "semantic_expected": "at night",
+          "semantic_got": "Tokyo at night",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "temples in Kyoto",
+          "expected": {
+            "place": "Kyoto"
+          },
+          "got": {
+            "place": "Kyoto, Japan",
+            "media": "photo"
+          },
+          "semantic_expected": "temples",
+          "semantic_got": "temples",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Mom's birthday cake",
+          "expected": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "got": {
+            "people": [
+              "Mom"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "birthday cake",
+          "semantic_got": "Mom's birthday cake",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Priya laughing",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "laughing",
+          "semantic_got": "Priya laughing",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Columbus skyline",
+          "expected": {
+            "place": "Columbus"
+          },
+          "got": {
+            "place": "Columbus, Ohio",
+            "media": "photo"
+          },
+          "semantic_expected": "skyline",
+          "semantic_got": "Columbus skyline",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "aerial shots from the drone",
+          "expected": {
+            "camera": "DJI"
+          },
+          "got": {
+            "camera": "DJI Mini 3 Pro",
+            "media": "photo"
+          },
+          "semantic_expected": "aerial shots",
+          "semantic_got": "aerial shots",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "birds with the 100-400",
+          "expected": {
+            "lens": "100-400"
+          },
+          "got": {
+            "lens": "RF100-400mm F5.6-8 IS USM"
+          },
+          "semantic_expected": "birds",
+          "semantic_got": "birds",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wildlife at 400mm",
+          "expected": {
+            "focal_min": 380,
+            "focal_max": 420
+          },
+          "got": {
+            "lens": "RF100-400mm F5.6-8 IS USM",
+            "focal_min": 380.0,
+            "focal_max": 420.0,
+            "media": "photo"
+          },
+          "semantic_expected": "wildlife",
+          "semantic_got": "wildlife",
+          "wrong_fields": [
+            "lens",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "bokeh portraits at f/1.8",
+          "expected": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "got": {
+            "lens": "RF50mm F1.8 STM",
+            "aperture_min": 1.75,
+            "aperture_max": 1.85,
+            "media": "photo"
+          },
+          "semantic_expected": "bokeh portraits",
+          "semantic_got": "bokeh portraits",
+          "wrong_fields": [
+            "lens",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "concert photos at iso 6400",
+          "expected": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "got": {
+            "iso_min": 6395,
+            "iso_max": 6405,
+            "media": "photo"
+          },
+          "semantic_expected": "concert",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "high iso night shots",
+          "expected": {
+            "iso_min": 3200
+          },
+          "got": {
+            "iso_min": 800,
+            "iso_max": 6400,
+            "media": "photo"
+          },
+          "semantic_expected": "night shots",
+          "semantic_got": "night shots",
+          "wrong_fields": [
+            "iso_max",
+            "iso_min",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fireworks July 2025",
+          "expected": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "got": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31",
+            "media": "photo"
+          },
+          "semantic_expected": "fireworks",
+          "semantic_got": "fireworks",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fall foliage in October",
+          "expected": {
+            "months": [
+              10
+            ]
+          },
+          "got": {
+            "date_from": "2026-10-01",
+            "date_to": "2026-10-31",
+            "media": "photo"
+          },
+          "semantic_expected": "fall foliage",
+          "semantic_got": "fall foliage",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "media",
+            "months"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "beach photos from summer",
+          "expected": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "got": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31",
+            "place": "beach",
+            "media": "photo"
+          },
+          "semantic_expected": "beach",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place",
+            "media",
+            "date_from",
+            "date_to",
+            "months"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas 2024",
+          "expected": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2024-12-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas tree",
+          "expected": {},
+          "got": {
+            "media": "photo"
+          },
+          "semantic_expected": "christmas tree",
+          "semantic_got": "christmas tree",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "may flowers",
+          "expected": {},
+          "got": {
+            "date_from": "2026-05-01",
+            "date_to": "2026-05-31",
+            "media": "photo"
+          },
+          "semantic_expected": "may flowers",
+          "semantic_got": "may flowers",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "flowers in May 2023",
+          "expected": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "got": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31",
+            "media": "photo"
+          },
+          "semantic_expected": "flowers",
+          "semantic_got": "flowers",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "food last month",
+          "expected": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-08-26",
+            "date_to": "2026-09-25",
+            "months": [
+              8
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "food",
+          "semantic_got": "",
+          "wrong_fields": [
+            "months",
+            "date_from",
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "anything from yesterday",
+          "expected": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "got": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "this week",
+          "expected": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-26",
+            "date_to": "2026-10-02"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "coffee shops in Lisbon last year",
+          "expected": {
+            "place": "Lisbon",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Lisbon",
+            "media": "photo"
+          },
+          "semantic_expected": "coffee shops",
+          "semantic_got": "coffee shops",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Paris trip 2019",
+          "expected": {
+            "place": "Paris",
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31"
+          },
+          "got": {
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31",
+            "place": "Paris, France",
+            "media": "photo"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "hikes between 2020 and 2022",
+          "expected": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "got": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "semantic_expected": "hikes",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "mountains since 2023",
+          "expected": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2023-01-01",
+            "media": "photo"
+          },
+          "semantic_expected": "mountains",
+          "semantic_got": "mountains",
+          "wrong_fields": [
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "videos of the waves",
+          "expected": {
+            "media": "video"
+          },
+          "got": {
+            "media": "video"
+          },
+          "semantic_expected": "waves",
+          "semantic_got": "waves",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "vertical shots of buildings",
+          "expected": {
+            "orientation": "portrait"
+          },
+          "got": {
+            "media": "photo",
+            "orientation": "portrait"
+          },
+          "semantic_expected": "buildings",
+          "semantic_got": "vertical shots of buildings",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "shot on iphone in San Francisco",
+          "expected": {
+            "camera": "iphone",
+            "place": "San Francisco"
+          },
+          "got": {
+            "place": "San Francisco",
+            "camera": "Apple iPhone 15 Pro",
+            "media": "photo"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden gate bridge in fog",
+          "expected": {},
+          "got": {
+            "place": "San Francisco",
+            "media": "photo"
+          },
+          "semantic_expected": "golden gate bridge in fog",
+          "semantic_got": "golden gate bridge in fog",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "trip to Golden Colorado",
+          "expected": {
+            "place": "Golden"
+          },
+          "got": {
+            "place": "Golden, Colorado",
+            "media": "photo"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "lake tahoe kayaking",
+          "expected": {
+            "place": "South Lake Tahoe"
+          },
+          "got": {
+            "place": "South Lake Tahoe, California",
+            "media": "photo"
+          },
+          "semantic_expected": "kayaking",
+          "semantic_got": "lake tahoe kayaking",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.5,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "New York City subway",
+          "expected": {
+            "place": "New York City"
+          },
+          "got": {
+            "place": "New York City",
+            "media": "photo"
+          },
+          "semantic_expected": "subway",
+          "semantic_got": "subway",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sushi in Japan",
+          "expected": {
+            "place": "Japan"
+          },
+          "got": {
+            "place": "Japan",
+            "media": "photo"
+          },
+          "semantic_expected": "sushi",
+          "semantic_got": "sushi",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Ohio state fair",
+          "expected": {
+            "place": "Ohio"
+          },
+          "got": {
+            "place": "Columbus, Ohio",
+            "media": "photo"
+          },
+          "semantic_expected": "state fair",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Rohan and Priya at the wedding",
+          "expected": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "wedding",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "selfies with Mom in Chicago",
+          "expected": {
+            "people": [
+              "Mom"
+            ],
+            "place": "Chicago"
+          },
+          "got": {
+            "place": "Chicago",
+            "people": [
+              "me",
+              "Mom"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "selfies",
+          "semantic_got": "",
+          "wrong_fields": [
+            "people",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sigma lens close ups",
+          "expected": {
+            "lens": "sigma"
+          },
+          "got": {
+            "lens": "Sigma 35mm F1.4 DG HSM",
+            "media": "photo"
+          },
+          "semantic_expected": "close ups",
+          "semantic_got": "close ups",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "landscapes with the 24-70 in 2024",
+          "expected": {
+            "lens": "24-70",
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31"
+          },
+          "got": {
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31",
+            "camera": "RF24-70mm F2.8 L IS USM",
+            "lens": "RF24-70mm F2.8 L IS USM",
+            "media": "photo"
+          },
+          "semantic_expected": "landscapes",
+          "semantic_got": "landscapes",
+          "wrong_fields": [
+            "media",
+            "camera"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "canon photos of my cat",
+          "expected": {
+            "camera": "canon"
+          },
+          "got": {
+            "camera": "Canon EOS R6",
+            "people": [
+              "me"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "cat",
+          "semantic_got": "my cat",
+          "wrong_fields": [
+            "people",
+            "media"
+          ],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "last weekend at the park",
+          "expected": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "got": {
+            "date_from": "2026-09-23",
+            "date_to": "2026-09-25",
+            "place": "park",
+            "media": "photo"
+          },
+          "semantic_expected": "park",
+          "semantic_got": "at the park",
+          "wrong_fields": [
+            "place",
+            "date_from",
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from the past 2 weeks",
+          "expected": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26",
+            "media": "photo"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snowboarding last winter",
+          "expected": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "got": {
+            "date_from": "2025-12-01",
+            "media": "photo"
+          },
+          "semantic_expected": "snowboarding",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_to",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "cherry blossoms this spring",
+          "expected": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "got": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31",
+            "place": "Tokyo, Japan",
+            "media": "photo"
+          },
+          "semantic_expected": "cherry blossoms",
+          "semantic_got": "cherry blossoms",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "halloween 2025 costumes",
+          "expected": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "got": {
+            "date_from": "2025-10-01",
+            "date_to": "2025-10-31",
+            "media": "photo"
+          },
+          "semantic_expected": "costumes",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "media"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "thanksgiving dinner last year",
+          "expected": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "got": {
+            "date_from": "2025-11-23",
+            "date_to": "2025-11-29"
+          },
+          "semantic_expected": "dinner",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "a menu with prices",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "a menu with prices",
+          "semantic_got": "a menu with prices",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street signs in Japanese",
+          "expected": {},
+          "got": {
+            "place": "Japan",
+            "media": "photo"
+          },
+          "semantic_expected": "street signs in japanese",
+          "semantic_got": "street signs in Japanese",
+          "wrong_fields": [
+            "place",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "black and white portraits of Priya",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ],
+            "media": "photo"
+          },
+          "semantic_expected": "black and white portraits",
+          "semantic_got": "black and white portraits",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sony a7iii astro",
+          "expected": {
+            "camera": "sony"
+          },
+          "got": {
+            "camera": "Sony ILCE-7M3",
+            "media": "photo"
+          },
+          "semantic_expected": "astro",
+          "semantic_got": "astro",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wide angle interiors under 24mm",
+          "expected": {
+            "focal_max": 24
+          },
+          "got": {
+            "focal_min": 24.0,
+            "focal_max": 24.0,
+            "media": "photo"
+          },
+          "semantic_expected": "wide angle interiors",
+          "semantic_got": "wide angle interiors",
+          "wrong_fields": [
+            "focal_min",
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "June 2024 in California",
+          "expected": {
+            "place": "California",
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30"
+          },
+          "got": {
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30",
+            "months": [
+              6
+            ],
+            "place": "California",
+            "media": "photo"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "media",
+            "months"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "rainy days in Portugal",
+          "expected": {
+            "place": "Portugal"
+          },
+          "got": {
+            "place": "Portugal",
+            "media": "photo"
+          },
+          "semantic_expected": "rainy days",
+          "semantic_got": "rainy days",
+          "wrong_fields": [
+            "media"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        }
+      ],
+      "mlflow_run_id": "d3ebb8cc23c743638916031e22037ed6"
+    },
+    {
+      "parser": "llm",
+      "n": 62,
+      "field_accuracy": 0.7204301075268817,
+      "exact_match": 0.7741935483870968,
+      "semantic_f1": 0.782258064516129,
+      "latency_p50_ms": 2002.6098915000148,
+      "latency_p95_ms": 2255.6994348499898,
+      "fields": {
+        "date_from": {
+          "precision": 0.6086956521739131,
+          "recall": 0.6666666666666666,
+          "support": 21
+        },
+        "date_to": {
+          "precision": 0.6190476190476191,
+          "recall": 0.6190476190476191,
+          "support": 21
+        },
+        "months": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 2
+        },
+        "place": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 15
+        },
+        "camera": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lens": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "focal_min": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 1
+        },
+        "focal_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "aperture_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "aperture_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "iso_min": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "support": 2
+        },
+        "iso_max": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 1
+        },
+        "people": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 6
+        },
+        "media": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "orientation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "rows": [
+        {
+          "query": "dog on a beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "dog on a beach",
+          "semantic_got": "dog on a beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden hour on the beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden hour on the beach",
+          "semantic_got": "golden hour on the beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "moody night street",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "moody night street",
+          "semantic_got": "moody night street",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "red car",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "red car",
+          "semantic_got": "red car",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from Chicago in 2025",
+          "expected": {
+            "place": "Chicago",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Chicago"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "portraits with the 85mm",
+          "expected": {
+            "lens": "85mm"
+          },
+          "got": {
+            "lens": "85mm"
+          },
+          "semantic_expected": "portraits",
+          "semantic_got": "portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street shots at night with the 35mm",
+          "expected": {
+            "lens": "35mm"
+          },
+          "got": {
+            "lens": "35mm"
+          },
+          "semantic_expected": "street shots at night",
+          "semantic_got": "street shots at night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "me and Rohan hiking",
+          "expected": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "got": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "semantic_expected": "hiking",
+          "semantic_got": "hiking",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sunset last summer",
+          "expected": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2025-06-01",
+            "date_to": "2025-08-31"
+          },
+          "semantic_expected": "sunset",
+          "semantic_got": "sunset",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snow in winter 2024",
+          "expected": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "semantic_expected": "snow",
+          "semantic_got": "snow",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Tokyo at night on the X100V",
+          "expected": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "got": {
+            "place": "Tokyo",
+            "camera": "x100v"
+          },
+          "semantic_expected": "at night",
+          "semantic_got": "Tokyo at night",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "temples in Kyoto",
+          "expected": {
+            "place": "Kyoto"
+          },
+          "got": {
+            "place": "Kyoto"
+          },
+          "semantic_expected": "temples",
+          "semantic_got": "temples",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Mom's birthday cake",
+          "expected": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "got": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "birthday cake",
+          "semantic_got": "Mom's birthday cake",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Priya laughing",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "laughing",
+          "semantic_got": "Priya laughing",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Columbus skyline",
+          "expected": {
+            "place": "Columbus"
+          },
+          "got": {
+            "place": "Columbus"
+          },
+          "semantic_expected": "skyline",
+          "semantic_got": "Columbus skyline",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "aerial shots from the drone",
+          "expected": {
+            "camera": "DJI"
+          },
+          "got": {
+            "camera": "dji"
+          },
+          "semantic_expected": "aerial shots",
+          "semantic_got": "aerial shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "birds with the 100-400",
+          "expected": {
+            "lens": "100-400"
+          },
+          "got": {
+            "lens": "100-400"
+          },
+          "semantic_expected": "birds",
+          "semantic_got": "birds",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wildlife at 400mm",
+          "expected": {
+            "focal_min": 380,
+            "focal_max": 420
+          },
+          "got": {
+            "focal_min": 380.0,
+            "focal_max": 420.0
+          },
+          "semantic_expected": "wildlife",
+          "semantic_got": "wildlife",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "bokeh portraits at f/1.8",
+          "expected": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "got": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "semantic_expected": "bokeh portraits",
+          "semantic_got": "bokeh portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "concert photos at iso 6400",
+          "expected": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "got": {
+            "iso_min": 6395,
+            "iso_max": 6405
+          },
+          "semantic_expected": "concert",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "high iso night shots",
+          "expected": {
+            "iso_min": 3200
+          },
+          "got": {
+            "iso_min": 800,
+            "iso_max": 6400
+          },
+          "semantic_expected": "night shots",
+          "semantic_got": "night shots",
+          "wrong_fields": [
+            "iso_max",
+            "iso_min"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fireworks July 2025",
+          "expected": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "got": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "semantic_expected": "fireworks",
+          "semantic_got": "fireworks",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fall foliage in October",
+          "expected": {
+            "months": [
+              10
+            ]
+          },
+          "got": {
+            "date_from": "2026-10-01",
+            "date_to": "2026-10-31"
+          },
+          "semantic_expected": "fall foliage",
+          "semantic_got": "fall foliage",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "months"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "beach photos from summer",
+          "expected": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "got": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "beach",
+          "semantic_got": "beach",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "months"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas 2024",
+          "expected": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2024-12-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas tree",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "christmas tree",
+          "semantic_got": "christmas tree",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "may flowers",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "may flowers",
+          "semantic_got": "may flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "flowers in May 2023",
+          "expected": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "got": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "semantic_expected": "flowers",
+          "semantic_got": "flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "food last month",
+          "expected": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-08-26",
+            "date_to": "2026-09-25",
+            "months": [
+              8
+            ]
+          },
+          "semantic_expected": "food",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to",
+            "months"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "anything from yesterday",
+          "expected": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "got": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "this week",
+          "expected": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-26",
+            "date_to": "2026-10-02"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "coffee shops in Lisbon last year",
+          "expected": {
+            "place": "Lisbon",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Lisbon"
+          },
+          "semantic_expected": "coffee shops",
+          "semantic_got": "coffee shops",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Paris trip 2019",
+          "expected": {
+            "place": "Paris",
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31"
+          },
+          "got": {
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31",
+            "place": "Paris"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "hikes between 2020 and 2022",
+          "expected": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "got": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "semantic_expected": "hikes",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "mountains since 2023",
+          "expected": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2023-01-01"
+          },
+          "semantic_expected": "mountains",
+          "semantic_got": "mountains",
+          "wrong_fields": [
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "videos of the waves",
+          "expected": {
+            "media": "video"
+          },
+          "got": {
+            "media": "video"
+          },
+          "semantic_expected": "waves",
+          "semantic_got": "waves",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "vertical shots of buildings",
+          "expected": {
+            "orientation": "portrait"
+          },
+          "got": {
+            "orientation": "portrait"
+          },
+          "semantic_expected": "buildings",
+          "semantic_got": "vertical shots of buildings",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "shot on iphone in San Francisco",
+          "expected": {
+            "camera": "iphone",
+            "place": "San Francisco"
+          },
+          "got": {
+            "place": "San Francisco",
+            "camera": "iphone"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden gate bridge in fog",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden gate bridge in fog",
+          "semantic_got": "golden gate bridge in fog",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "trip to Golden Colorado",
+          "expected": {
+            "place": "Golden"
+          },
+          "got": {
+            "place": "Golden"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "lake tahoe kayaking",
+          "expected": {
+            "place": "South Lake Tahoe"
+          },
+          "got": {
+            "place": "South Lake Tahoe"
+          },
+          "semantic_expected": "kayaking",
+          "semantic_got": "lake tahoe kayaking",
+          "wrong_fields": [],
+          "semantic_f1": 0.5,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "New York City subway",
+          "expected": {
+            "place": "New York City"
+          },
+          "got": {
+            "place": "New York City"
+          },
+          "semantic_expected": "subway",
+          "semantic_got": "subway",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sushi in Japan",
+          "expected": {
+            "place": "Japan"
+          },
+          "got": {
+            "place": "Japan"
+          },
+          "semantic_expected": "sushi",
+          "semantic_got": "sushi",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Ohio state fair",
+          "expected": {
+            "place": "Ohio"
+          },
+          "got": {
+            "place": "Ohio"
+          },
+          "semantic_expected": "state fair",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Rohan and Priya at the wedding",
+          "expected": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "semantic_expected": "wedding",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "selfies with Mom in Chicago",
+          "expected": {
+            "people": [
+              "Mom"
+            ],
+            "place": "Chicago"
+          },
+          "got": {
+            "place": "Chicago",
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "selfies",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sigma lens close ups",
+          "expected": {
+            "lens": "sigma"
+          },
+          "got": {
+            "lens": "sigma"
+          },
+          "semantic_expected": "close ups",
+          "semantic_got": "close ups",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "landscapes with the 24-70 in 2024",
+          "expected": {
+            "lens": "24-70",
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31"
+          },
+          "got": {
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31",
+            "lens": "24-70"
+          },
+          "semantic_expected": "landscapes",
+          "semantic_got": "landscapes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "canon photos of my cat",
+          "expected": {
+            "camera": "canon"
+          },
+          "got": {
+            "camera": "canon"
+          },
+          "semantic_expected": "cat",
+          "semantic_got": "my cat",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "last weekend at the park",
+          "expected": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "got": {
+            "date_from": "2026-09-23",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "park",
+          "semantic_got": "at the park",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from the past 2 weeks",
+          "expected": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snowboarding last winter",
+          "expected": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "got": {
+            "date_from": "2025-12-01"
+          },
+          "semantic_expected": "snowboarding",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_to"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "cherry blossoms this spring",
+          "expected": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "got": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "semantic_expected": "cherry blossoms",
+          "semantic_got": "cherry blossoms",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "halloween 2025 costumes",
+          "expected": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "got": {
+            "date_from": "2025-10-01",
+            "date_to": "2025-10-31"
+          },
+          "semantic_expected": "costumes",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "thanksgiving dinner last year",
+          "expected": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "got": {
+            "date_from": "2025-11-23",
+            "date_to": "2025-11-29"
+          },
+          "semantic_expected": "dinner",
+          "semantic_got": "",
+          "wrong_fields": [
+            "date_from",
+            "date_to"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "a menu with prices",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "a menu with prices",
+          "semantic_got": "a menu with prices",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street signs in Japanese",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "street signs in japanese",
+          "semantic_got": "street signs in Japanese",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "black and white portraits of Priya",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "black and white portraits",
+          "semantic_got": "black and white portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sony a7iii astro",
+          "expected": {
+            "camera": "sony"
+          },
+          "got": {
+            "camera": "sony"
+          },
+          "semantic_expected": "astro",
+          "semantic_got": "astro",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wide angle interiors under 24mm",
+          "expected": {
+            "focal_max": 24
+          },
+          "got": {
+            "focal_min": 24.0,
+            "focal_max": 24.0
+          },
+          "semantic_expected": "wide angle interiors",
+          "semantic_got": "wide angle interiors",
+          "wrong_fields": [
+            "focal_min"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "June 2024 in California",
+          "expected": {
+            "place": "California",
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30"
+          },
+          "got": {
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30",
+            "months": [
+              6
+            ],
+            "place": "California"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [
+            "months"
+          ],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "rainy days in Portugal",
+          "expected": {
+            "place": "Portugal"
+          },
+          "got": {
+            "place": "Portugal"
+          },
+          "semantic_expected": "rainy days",
+          "semantic_got": "rainy days",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        }
+      ],
+      "mlflow_run_id": "23573662c63548c693c2a23e198cec0c"
+    },
+    {
+      "parser": "hybrid",
+      "n": 62,
+      "field_accuracy": 0.9882352941176471,
+      "exact_match": 0.9838709677419355,
+      "semantic_f1": 0.8145161290322581,
+      "latency_p50_ms": 1935.4382764999798,
+      "latency_p95_ms": 2233.009197249987,
+      "fields": {
+        "date_from": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "date_to": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "months": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "place": {
+          "precision": 0.9333333333333333,
+          "recall": 0.9333333333333333,
+          "support": 15
+        },
+        "camera": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lens": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "focal_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "focal_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "aperture_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "aperture_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "iso_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "iso_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "people": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 6
+        },
+        "media": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "orientation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "rows": [
+        {
+          "query": "dog on a beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "dog on a beach",
+          "semantic_got": "dog on a beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden hour on the beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden hour on the beach",
+          "semantic_got": "golden hour on the beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "moody night street",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "moody night street",
+          "semantic_got": "moody night street",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "red car",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "red car",
+          "semantic_got": "red car",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from Chicago in 2025",
+          "expected": {
+            "place": "Chicago",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Chicago"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "portraits with the 85mm",
+          "expected": {
+            "lens": "85mm"
+          },
+          "got": {
+            "lens": "85mm"
+          },
+          "semantic_expected": "portraits",
+          "semantic_got": "portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street shots at night with the 35mm",
+          "expected": {
+            "lens": "35mm"
+          },
+          "got": {
+            "lens": "35mm"
+          },
+          "semantic_expected": "street shots at night",
+          "semantic_got": "street shots at night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "me and Rohan hiking",
+          "expected": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "me"
+            ]
+          },
+          "semantic_expected": "hiking",
+          "semantic_got": "hiking",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sunset last summer",
+          "expected": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "sunset",
+          "semantic_got": "sunset",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snow in winter 2024",
+          "expected": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "semantic_expected": "snow",
+          "semantic_got": "snow",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Tokyo at night on the X100V",
+          "expected": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "got": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "semantic_expected": "at night",
+          "semantic_got": "night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "temples in Kyoto",
+          "expected": {
+            "place": "Kyoto"
+          },
+          "got": {
+            "place": "Kyoto"
+          },
+          "semantic_expected": "temples",
+          "semantic_got": "temples",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Mom's birthday cake",
+          "expected": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "got": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "birthday cake",
+          "semantic_got": "birthday cake",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Priya laughing",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "laughing",
+          "semantic_got": "laughing",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Columbus skyline",
+          "expected": {
+            "place": "Columbus"
+          },
+          "got": {
+            "place": "Columbus"
+          },
+          "semantic_expected": "skyline",
+          "semantic_got": "skyline",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "aerial shots from the drone",
+          "expected": {
+            "camera": "DJI"
+          },
+          "got": {
+            "camera": "dji"
+          },
+          "semantic_expected": "aerial shots",
+          "semantic_got": "aerial shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "birds with the 100-400",
+          "expected": {
+            "lens": "100-400"
+          },
+          "got": {
+            "lens": "100-400"
+          },
+          "semantic_expected": "birds",
+          "semantic_got": "birds",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wildlife at 400mm",
+          "expected": {
+            "focal_min": 380,
+            "focal_max": 420
+          },
+          "got": {
+            "focal_min": 380.0,
+            "focal_max": 420.0
+          },
+          "semantic_expected": "wildlife",
+          "semantic_got": "wildlife",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "bokeh portraits at f/1.8",
+          "expected": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "got": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "semantic_expected": "bokeh portraits",
+          "semantic_got": "bokeh portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "concert photos at iso 6400",
+          "expected": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "got": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "semantic_expected": "concert",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "high iso night shots",
+          "expected": {
+            "iso_min": 3200
+          },
+          "got": {
+            "iso_min": 3200
+          },
+          "semantic_expected": "night shots",
+          "semantic_got": "night shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fireworks July 2025",
+          "expected": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "got": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "semantic_expected": "fireworks",
+          "semantic_got": "fireworks",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "fall foliage in October",
+          "expected": {
+            "months": [
+              10
+            ]
+          },
+          "got": {
+            "months": [
+              10
+            ]
+          },
+          "semantic_expected": "fall foliage",
+          "semantic_got": "fall foliage",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "beach photos from summer",
+          "expected": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "got": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "semantic_expected": "beach",
+          "semantic_got": "beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas 2024",
+          "expected": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "got": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "christmas tree",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "christmas tree",
+          "semantic_got": "christmas tree",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "may flowers",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "may flowers",
+          "semantic_got": "may flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "flowers in May 2023",
+          "expected": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "got": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "semantic_expected": "flowers",
+          "semantic_got": "flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "food last month",
+          "expected": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "food",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "anything from yesterday",
+          "expected": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "got": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "this week",
+          "expected": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "coffee shops in Lisbon last year",
+          "expected": {
+            "place": "Lisbon",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Lisbon"
+          },
+          "semantic_expected": "coffee shops",
+          "semantic_got": "coffee shops",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Paris trip 2019",
+          "expected": {
+            "place": "Paris",
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31"
+          },
+          "got": {
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31",
+            "place": "Paris"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "hikes between 2020 and 2022",
+          "expected": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "got": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "semantic_expected": "hikes",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "mountains since 2023",
+          "expected": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "mountains",
+          "semantic_got": "mountains",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "videos of the waves",
+          "expected": {
+            "media": "video"
+          },
+          "got": {
+            "media": "video"
+          },
+          "semantic_expected": "waves",
+          "semantic_got": "waves",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "vertical shots of buildings",
+          "expected": {
+            "orientation": "portrait"
+          },
+          "got": {
+            "orientation": "portrait"
+          },
+          "semantic_expected": "buildings",
+          "semantic_got": "buildings",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "shot on iphone in San Francisco",
+          "expected": {
+            "camera": "iphone",
+            "place": "San Francisco"
+          },
+          "got": {
+            "place": "San Francisco",
+            "camera": "iphone"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "golden gate bridge in fog",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden gate bridge in fog",
+          "semantic_got": "golden gate bridge in fog",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "trip to Golden Colorado",
+          "expected": {
+            "place": "Golden"
+          },
+          "got": {
+            "place": "Colorado"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "lake tahoe kayaking",
+          "expected": {
+            "place": "South Lake Tahoe"
+          },
+          "got": {
+            "place": "South Lake Tahoe"
+          },
+          "semantic_expected": "kayaking",
+          "semantic_got": "lake tahoe kayaking",
+          "wrong_fields": [],
+          "semantic_f1": 0.5,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "New York City subway",
+          "expected": {
+            "place": "New York City"
+          },
+          "got": {
+            "place": "New York City"
+          },
+          "semantic_expected": "subway",
+          "semantic_got": "subway",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sushi in Japan",
+          "expected": {
+            "place": "Japan"
+          },
+          "got": {
+            "place": "Japan"
+          },
+          "semantic_expected": "sushi",
+          "semantic_got": "sushi",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Ohio state fair",
+          "expected": {
+            "place": "Ohio"
+          },
+          "got": {
+            "place": "Ohio"
+          },
+          "semantic_expected": "state fair",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Rohan and Priya at the wedding",
+          "expected": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "semantic_expected": "wedding",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "selfies with Mom in Chicago",
+          "expected": {
+            "people": [
+              "Mom"
+            ],
+            "place": "Chicago"
+          },
+          "got": {
+            "place": "Chicago",
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "selfies",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sigma lens close ups",
+          "expected": {
+            "lens": "sigma"
+          },
+          "got": {
+            "lens": "sigma"
+          },
+          "semantic_expected": "close ups",
+          "semantic_got": "close ups",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "landscapes with the 24-70 in 2024",
+          "expected": {
+            "lens": "24-70",
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31"
+          },
+          "got": {
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31",
+            "lens": "24-70"
+          },
+          "semantic_expected": "landscapes",
+          "semantic_got": "landscapes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "canon photos of my cat",
+          "expected": {
+            "camera": "canon"
+          },
+          "got": {
+            "camera": "canon"
+          },
+          "semantic_expected": "cat",
+          "semantic_got": "cat",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "last weekend at the park",
+          "expected": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "got": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "semantic_expected": "park",
+          "semantic_got": "park",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "photos from the past 2 weeks",
+          "expected": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "snowboarding last winter",
+          "expected": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "got": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "semantic_expected": "snowboarding",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "cherry blossoms this spring",
+          "expected": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "got": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "semantic_expected": "cherry blossoms",
+          "semantic_got": "cherry blossoms",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "halloween 2025 costumes",
+          "expected": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "got": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "semantic_expected": "costumes",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "thanksgiving dinner last year",
+          "expected": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "got": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "semantic_expected": "dinner",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "a menu with prices",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "a menu with prices",
+          "semantic_got": "a menu with prices",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street signs in Japanese",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "street signs in japanese",
+          "semantic_got": "street signs in Japanese",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "black and white portraits of Priya",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "black and white portraits",
+          "semantic_got": "black and white portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "sony a7iii astro",
+          "expected": {
+            "camera": "sony"
+          },
+          "got": {
+            "camera": "sony"
+          },
+          "semantic_expected": "astro",
+          "semantic_got": "astro",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "wide angle interiors under 24mm",
+          "expected": {
+            "focal_max": 24
+          },
+          "got": {
+            "focal_max": 24.0
+          },
+          "semantic_expected": "wide angle interiors",
+          "semantic_got": "wide angle interiors",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "June 2024 in California",
+          "expected": {
+            "place": "California",
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30"
+          },
+          "got": {
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30",
+            "place": "California"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "rainy days in Portugal",
+          "expected": {
+            "place": "Portugal"
+          },
+          "got": {
+            "place": "Portugal"
+          },
+          "semantic_expected": "rainy days",
+          "semantic_got": "rainy days",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        }
+      ],
+      "mlflow_run_id": "f599bdfe55244a1ca29e9c259e772a49"
+    },
+    {
+      "parser": "auto",
+      "n": 62,
+      "field_accuracy": 0.9764705882352941,
+      "exact_match": 0.967741935483871,
+      "semantic_f1": 0.9220430107526881,
+      "latency_p50_ms": 0.12651450003886566,
+      "latency_p95_ms": 1888.9093749500657,
+      "fields": {
+        "date_from": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "date_to": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 21
+        },
+        "months": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "place": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8666666666666667,
+          "support": 15
+        },
+        "camera": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lens": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "focal_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "focal_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "aperture_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "aperture_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "iso_min": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2
+        },
+        "iso_max": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "people": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 6
+        },
+        "media": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        },
+        "orientation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "rows": [
+        {
+          "query": "dog on a beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "dog on a beach",
+          "semantic_got": "dog on a beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "golden hour on the beach",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden hour on the beach",
+          "semantic_got": "golden hour on the beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "moody night street",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "moody night street",
+          "semantic_got": "moody night street",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "red car",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "red car",
+          "semantic_got": "red car",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "photos from Chicago in 2025",
+          "expected": {
+            "place": "Chicago",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Chicago"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "portraits with the 85mm",
+          "expected": {
+            "lens": "85mm"
+          },
+          "got": {
+            "lens": "85mm"
+          },
+          "semantic_expected": "portraits",
+          "semantic_got": "portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "street shots at night with the 35mm",
+          "expected": {
+            "lens": "35mm"
+          },
+          "got": {
+            "lens": "35mm"
+          },
+          "semantic_expected": "street shots at night",
+          "semantic_got": "street shots at night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "me and Rohan hiking",
+          "expected": {
+            "people": [
+              "me",
+              "Rohan"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "me"
+            ]
+          },
+          "semantic_expected": "hiking",
+          "semantic_got": "hiking",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sunset last summer",
+          "expected": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-06-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "sunset",
+          "semantic_got": "sunset",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "snow in winter 2024",
+          "expected": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "got": {
+            "date_from": "2024-12-01",
+            "date_to": "2025-02-28"
+          },
+          "semantic_expected": "snow",
+          "semantic_got": "snow",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Tokyo at night on the X100V",
+          "expected": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "got": {
+            "place": "Tokyo",
+            "camera": "X100V"
+          },
+          "semantic_expected": "at night",
+          "semantic_got": "night",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "temples in Kyoto",
+          "expected": {
+            "place": "Kyoto"
+          },
+          "got": {
+            "place": "Kyoto"
+          },
+          "semantic_expected": "temples",
+          "semantic_got": "temples",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Mom's birthday cake",
+          "expected": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "got": {
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "birthday cake",
+          "semantic_got": "birthday cake",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "Priya laughing",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "laughing",
+          "semantic_got": "laughing",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Columbus skyline",
+          "expected": {
+            "place": "Columbus"
+          },
+          "got": {
+            "place": "Columbus"
+          },
+          "semantic_expected": "skyline",
+          "semantic_got": "skyline",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "aerial shots from the drone",
+          "expected": {
+            "camera": "DJI"
+          },
+          "got": {
+            "camera": "dji"
+          },
+          "semantic_expected": "aerial shots",
+          "semantic_got": "aerial shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "birds with the 100-400",
+          "expected": {
+            "lens": "100-400"
+          },
+          "got": {
+            "lens": "100-400"
+          },
+          "semantic_expected": "birds",
+          "semantic_got": "birds",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "wildlife at 400mm",
+          "expected": {
+            "focal_min": 380,
+            "focal_max": 420
+          },
+          "got": {
+            "focal_min": 380.0,
+            "focal_max": 420.0
+          },
+          "semantic_expected": "wildlife",
+          "semantic_got": "wildlife",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "bokeh portraits at f/1.8",
+          "expected": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "got": {
+            "aperture_min": 1.75,
+            "aperture_max": 1.85
+          },
+          "semantic_expected": "bokeh portraits",
+          "semantic_got": "bokeh portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "concert photos at iso 6400",
+          "expected": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "got": {
+            "iso_min": 6400,
+            "iso_max": 6400
+          },
+          "semantic_expected": "concert",
+          "semantic_got": "concert",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "high iso night shots",
+          "expected": {
+            "iso_min": 3200
+          },
+          "got": {
+            "iso_min": 3200
+          },
+          "semantic_expected": "night shots",
+          "semantic_got": "night shots",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "fireworks July 2025",
+          "expected": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "got": {
+            "date_from": "2025-07-01",
+            "date_to": "2025-07-31"
+          },
+          "semantic_expected": "fireworks",
+          "semantic_got": "fireworks",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "fall foliage in October",
+          "expected": {
+            "months": [
+              10
+            ]
+          },
+          "got": {
+            "months": [
+              10
+            ]
+          },
+          "semantic_expected": "fall foliage",
+          "semantic_got": "fall foliage",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "beach photos from summer",
+          "expected": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "got": {
+            "months": [
+              6,
+              7,
+              8
+            ]
+          },
+          "semantic_expected": "beach",
+          "semantic_got": "beach",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "christmas 2024",
+          "expected": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "got": {
+            "date_from": "2024-12-24",
+            "date_to": "2024-12-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "christmas tree",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "christmas tree",
+          "semantic_got": "christmas tree",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "may flowers",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "may flowers",
+          "semantic_got": "may flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "flowers in May 2023",
+          "expected": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "got": {
+            "date_from": "2023-05-01",
+            "date_to": "2023-05-31"
+          },
+          "semantic_expected": "flowers",
+          "semantic_got": "flowers",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "food last month",
+          "expected": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "got": {
+            "date_from": "2026-08-01",
+            "date_to": "2026-08-31"
+          },
+          "semantic_expected": "food",
+          "semantic_got": "food",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "anything from yesterday",
+          "expected": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "got": {
+            "date_from": "2026-09-25",
+            "date_to": "2026-09-25"
+          },
+          "semantic_expected": "",
+          "semantic_got": "anything",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "this week",
+          "expected": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-21",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "coffee shops in Lisbon last year",
+          "expected": {
+            "place": "Lisbon",
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31"
+          },
+          "got": {
+            "date_from": "2025-01-01",
+            "date_to": "2025-12-31",
+            "place": "Lisbon"
+          },
+          "semantic_expected": "coffee shops",
+          "semantic_got": "coffee shops",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Paris trip 2019",
+          "expected": {
+            "place": "Paris",
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31"
+          },
+          "got": {
+            "date_from": "2019-01-01",
+            "date_to": "2019-12-31",
+            "place": "Paris"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "trip",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "hikes between 2020 and 2022",
+          "expected": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "got": {
+            "date_from": "2020-01-01",
+            "date_to": "2022-12-31"
+          },
+          "semantic_expected": "hikes",
+          "semantic_got": "hikes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "mountains since 2023",
+          "expected": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2023-01-01",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "mountains",
+          "semantic_got": "mountains",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "videos of the waves",
+          "expected": {
+            "media": "video"
+          },
+          "got": {
+            "media": "video"
+          },
+          "semantic_expected": "waves",
+          "semantic_got": "waves",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "vertical shots of buildings",
+          "expected": {
+            "orientation": "portrait"
+          },
+          "got": {
+            "orientation": "portrait"
+          },
+          "semantic_expected": "buildings",
+          "semantic_got": "buildings",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "shot on iphone in San Francisco",
+          "expected": {
+            "camera": "iphone",
+            "place": "San Francisco"
+          },
+          "got": {
+            "place": "San Francisco",
+            "camera": "iphone"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "golden gate bridge in fog",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "golden gate bridge in fog",
+          "semantic_got": "golden gate bridge in fog",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "trip to Golden Colorado",
+          "expected": {
+            "place": "Golden"
+          },
+          "got": {
+            "place": "Colorado"
+          },
+          "semantic_expected": "trip",
+          "semantic_got": "",
+          "wrong_fields": [
+            "place"
+          ],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "lake tahoe kayaking",
+          "expected": {
+            "place": "South Lake Tahoe"
+          },
+          "got": {},
+          "semantic_expected": "kayaking",
+          "semantic_got": "lake tahoe kayaking",
+          "wrong_fields": [
+            "place"
+          ],
+          "semantic_f1": 0.5,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "New York City subway",
+          "expected": {
+            "place": "New York City"
+          },
+          "got": {
+            "place": "New York City"
+          },
+          "semantic_expected": "subway",
+          "semantic_got": "subway",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sushi in Japan",
+          "expected": {
+            "place": "Japan"
+          },
+          "got": {
+            "place": "Japan"
+          },
+          "semantic_expected": "sushi",
+          "semantic_got": "sushi",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Ohio state fair",
+          "expected": {
+            "place": "Ohio"
+          },
+          "got": {
+            "place": "Ohio"
+          },
+          "semantic_expected": "state fair",
+          "semantic_got": "state fair",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "Rohan and Priya at the wedding",
+          "expected": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Rohan",
+              "Priya"
+            ]
+          },
+          "semantic_expected": "wedding",
+          "semantic_got": "wedding",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "selfies with Mom in Chicago",
+          "expected": {
+            "people": [
+              "Mom"
+            ],
+            "place": "Chicago"
+          },
+          "got": {
+            "place": "Chicago",
+            "people": [
+              "Mom"
+            ]
+          },
+          "semantic_expected": "selfies",
+          "semantic_got": "selfies",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sigma lens close ups",
+          "expected": {
+            "lens": "sigma"
+          },
+          "got": {
+            "lens": "sigma"
+          },
+          "semantic_expected": "close ups",
+          "semantic_got": "close ups",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "landscapes with the 24-70 in 2024",
+          "expected": {
+            "lens": "24-70",
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31"
+          },
+          "got": {
+            "date_from": "2024-01-01",
+            "date_to": "2024-12-31",
+            "lens": "24-70"
+          },
+          "semantic_expected": "landscapes",
+          "semantic_got": "landscapes",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "canon photos of my cat",
+          "expected": {
+            "camera": "canon"
+          },
+          "got": {
+            "camera": "canon"
+          },
+          "semantic_expected": "cat",
+          "semantic_got": "cat",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "last weekend at the park",
+          "expected": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "got": {
+            "date_from": "2026-09-19",
+            "date_to": "2026-09-20"
+          },
+          "semantic_expected": "park",
+          "semantic_got": "park",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "photos from the past 2 weeks",
+          "expected": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "got": {
+            "date_from": "2026-09-12",
+            "date_to": "2026-09-26"
+          },
+          "semantic_expected": "",
+          "semantic_got": "from",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "snowboarding last winter",
+          "expected": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "got": {
+            "date_from": "2025-12-01",
+            "date_to": "2026-02-28"
+          },
+          "semantic_expected": "snowboarding",
+          "semantic_got": "snowboarding",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "cherry blossoms this spring",
+          "expected": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "got": {
+            "date_from": "2026-03-01",
+            "date_to": "2026-05-31"
+          },
+          "semantic_expected": "cherry blossoms",
+          "semantic_got": "cherry blossoms",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "halloween 2025 costumes",
+          "expected": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "got": {
+            "date_from": "2025-10-31",
+            "date_to": "2025-10-31"
+          },
+          "semantic_expected": "costumes",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 0.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "thanksgiving dinner last year",
+          "expected": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "got": {
+            "date_from": "2025-11-27",
+            "date_to": "2025-11-30"
+          },
+          "semantic_expected": "dinner",
+          "semantic_got": "dinner",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "a menu with prices",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "a menu with prices",
+          "semantic_got": "a menu with prices",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "street signs in Japanese",
+          "expected": {},
+          "got": {},
+          "semantic_expected": "street signs in japanese",
+          "semantic_got": "street signs in Japanese",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "llm",
+          "error": null
+        },
+        {
+          "query": "black and white portraits of Priya",
+          "expected": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "got": {
+            "people": [
+              "Priya"
+            ]
+          },
+          "semantic_expected": "black and white portraits",
+          "semantic_got": "black and white portraits",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "sony a7iii astro",
+          "expected": {
+            "camera": "sony"
+          },
+          "got": {
+            "camera": "sony"
+          },
+          "semantic_expected": "astro",
+          "semantic_got": "a7iii astro",
+          "wrong_fields": [],
+          "semantic_f1": 0.667,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "wide angle interiors under 24mm",
+          "expected": {
+            "focal_max": 24
+          },
+          "got": {
+            "focal_max": 24.0
+          },
+          "semantic_expected": "wide angle interiors",
+          "semantic_got": "wide angle interiors",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "June 2024 in California",
+          "expected": {
+            "place": "California",
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30"
+          },
+          "got": {
+            "date_from": "2024-06-01",
+            "date_to": "2024-06-30",
+            "place": "California"
+          },
+          "semantic_expected": "",
+          "semantic_got": "",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        },
+        {
+          "query": "rainy days in Portugal",
+          "expected": {
+            "place": "Portugal"
+          },
+          "got": {
+            "place": "Portugal"
+          },
+          "semantic_expected": "rainy days",
+          "semantic_got": "rainy days",
+          "wrong_fields": [],
+          "semantic_f1": 1.0,
+          "source": "rules",
+          "error": null
+        }
+      ],
+      "mlflow_run_id": "961f60d6a3a541f984d4210bd60830b2"
+    }
+  ]
+}

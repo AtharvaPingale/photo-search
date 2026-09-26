@@ -1,0 +1,12 @@
+.venv
+.git
+data
+backups
+mlflow.db
+mlruns
+**/__pycache__
+web/node_modules
+web/dist
+web/dev-dist
+.env
+*.dump

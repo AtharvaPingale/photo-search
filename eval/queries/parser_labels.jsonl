@@ -1,0 +1,62 @@
+{"query": "dog on a beach", "today": "2026-09-26", "semantic": "dog on a beach", "filters": {}}
+{"query": "golden hour on the beach", "today": "2026-09-26", "semantic": "golden hour on the beach", "filters": {}}
+{"query": "moody night street", "today": "2026-09-26", "semantic": "moody night street", "filters": {}}
+{"query": "red car", "today": "2026-09-26", "semantic": "red car", "filters": {}}
+{"query": "photos from Chicago in 2025", "today": "2026-09-26", "semantic": "", "filters": {"place": "Chicago", "date_from": "2025-01-01", "date_to": "2025-12-31"}}
+{"query": "portraits with the 85mm", "today": "2026-09-26", "semantic": "portraits", "filters": {"lens": "85mm"}}
+{"query": "street shots at night with the 35mm", "today": "2026-09-26", "semantic": "street shots at night", "filters": {"lens": "35mm"}}
+{"query": "me and Rohan hiking", "today": "2026-09-26", "semantic": "hiking", "filters": {"people": ["me", "Rohan"]}}
+{"query": "sunset last summer", "today": "2026-09-26", "semantic": "sunset", "filters": {"date_from": "2026-06-01", "date_to": "2026-08-31"}}
+{"query": "snow in winter 2024", "today": "2026-09-26", "semantic": "snow", "filters": {"date_from": "2024-12-01", "date_to": "2025-02-28"}}
+{"query": "Tokyo at night on the X100V", "today": "2026-09-26", "semantic": "at night", "filters": {"place": "Tokyo", "camera": "X100V"}}
+{"query": "temples in Kyoto", "today": "2026-09-26", "semantic": "temples", "filters": {"place": "Kyoto"}}
+{"query": "Mom's birthday cake", "today": "2026-09-26", "semantic": "birthday cake", "filters": {"people": ["Mom"]}}
+{"query": "Priya laughing", "today": "2026-09-26", "semantic": "laughing", "filters": {"people": ["Priya"]}}
+{"query": "Columbus skyline", "today": "2026-09-26", "semantic": "skyline", "filters": {"place": "Columbus"}}
+{"query": "aerial shots from the drone", "today": "2026-09-26", "semantic": "aerial shots", "filters": {"camera": "DJI"}}
+{"query": "birds with the 100-400", "today": "2026-09-26", "semantic": "birds", "filters": {"lens": "100-400"}}
+{"query": "wildlife at 400mm", "today": "2026-09-26", "semantic": "wildlife", "filters": {"focal_min": 380, "focal_max": 420}}
+{"query": "bokeh portraits at f/1.8", "today": "2026-09-26", "semantic": "bokeh portraits", "filters": {"aperture_min": 1.75, "aperture_max": 1.85}}
+{"query": "concert photos at iso 6400", "today": "2026-09-26", "semantic": "concert", "filters": {"iso_min": 6400, "iso_max": 6400}}
+{"query": "high iso night shots", "today": "2026-09-26", "semantic": "night shots", "filters": {"iso_min": 3200}}
+{"query": "fireworks July 2025", "today": "2026-09-26", "semantic": "fireworks", "filters": {"date_from": "2025-07-01", "date_to": "2025-07-31"}}
+{"query": "fall foliage in October", "today": "2026-09-26", "semantic": "fall foliage", "filters": {"months": [10]}}
+{"query": "beach photos from summer", "today": "2026-09-26", "semantic": "beach", "filters": {"months": [6, 7, 8]}}
+{"query": "christmas 2024", "today": "2026-09-26", "semantic": "", "filters": {"date_from": "2024-12-24", "date_to": "2024-12-26"}}
+{"query": "christmas tree", "today": "2026-09-26", "semantic": "christmas tree", "filters": {}}
+{"query": "may flowers", "today": "2026-09-26", "semantic": "may flowers", "filters": {}}
+{"query": "flowers in May 2023", "today": "2026-09-26", "semantic": "flowers", "filters": {"date_from": "2023-05-01", "date_to": "2023-05-31"}}
+{"query": "food last month", "today": "2026-09-26", "semantic": "food", "filters": {"date_from": "2026-08-01", "date_to": "2026-08-31"}}
+{"query": "anything from yesterday", "today": "2026-09-26", "semantic": "", "filters": {"date_from": "2026-09-25", "date_to": "2026-09-25"}}
+{"query": "this week", "today": "2026-09-26", "semantic": "", "filters": {"date_from": "2026-09-21", "date_to": "2026-09-26"}}
+{"query": "coffee shops in Lisbon last year", "today": "2026-09-26", "semantic": "coffee shops", "filters": {"place": "Lisbon", "date_from": "2025-01-01", "date_to": "2025-12-31"}}
+{"query": "Paris trip 2019", "today": "2026-09-26", "semantic": "trip", "filters": {"place": "Paris", "date_from": "2019-01-01", "date_to": "2019-12-31"}}
+{"query": "hikes between 2020 and 2022", "today": "2026-09-26", "semantic": "hikes", "filters": {"date_from": "2020-01-01", "date_to": "2022-12-31"}}
+{"query": "mountains since 2023", "today": "2026-09-26", "semantic": "mountains", "filters": {"date_from": "2023-01-01", "date_to": "2026-09-26"}}
+{"query": "videos of the waves", "today": "2026-09-26", "semantic": "waves", "filters": {"media": "video"}}
+{"query": "vertical shots of buildings", "today": "2026-09-26", "semantic": "buildings", "filters": {"orientation": "portrait"}}
+{"query": "shot on iphone in San Francisco", "today": "2026-09-26", "semantic": "", "filters": {"camera": "iphone", "place": "San Francisco"}}
+{"query": "golden gate bridge in fog", "today": "2026-09-26", "semantic": "golden gate bridge in fog", "filters": {}}
+{"query": "trip to Golden Colorado", "today": "2026-09-26", "semantic": "trip", "filters": {"place": "Golden"}}
+{"query": "lake tahoe kayaking", "today": "2026-09-26", "semantic": "kayaking", "filters": {"place": "South Lake Tahoe"}}
+{"query": "New York City subway", "today": "2026-09-26", "semantic": "subway", "filters": {"place": "New York City"}}
+{"query": "sushi in Japan", "today": "2026-09-26", "semantic": "sushi", "filters": {"place": "Japan"}}
+{"query": "Ohio state fair", "today": "2026-09-26", "semantic": "state fair", "filters": {"place": "Ohio"}}
+{"query": "Rohan and Priya at the wedding", "today": "2026-09-26", "semantic": "wedding", "filters": {"people": ["Rohan", "Priya"]}}
+{"query": "selfies with Mom in Chicago", "today": "2026-09-26", "semantic": "selfies", "filters": {"people": ["Mom"], "place": "Chicago"}}
+{"query": "sigma lens close ups", "today": "2026-09-26", "semantic": "close ups", "filters": {"lens": "sigma"}}
+{"query": "landscapes with the 24-70 in 2024", "today": "2026-09-26", "semantic": "landscapes", "filters": {"lens": "24-70", "date_from": "2024-01-01", "date_to": "2024-12-31"}}
+{"query": "canon photos of my cat", "today": "2026-09-26", "semantic": "cat", "filters": {"camera": "canon"}}
+{"query": "last weekend at the park", "today": "2026-09-26", "semantic": "park", "filters": {"date_from": "2026-09-19", "date_to": "2026-09-20"}}
+{"query": "photos from the past 2 weeks", "today": "2026-09-26", "semantic": "", "filters": {"date_from": "2026-09-12", "date_to": "2026-09-26"}}
+{"query": "snowboarding last winter", "today": "2026-09-26", "semantic": "snowboarding", "filters": {"date_from": "2025-12-01", "date_to": "2026-02-28"}}
+{"query": "cherry blossoms this spring", "today": "2026-09-26", "semantic": "cherry blossoms", "filters": {"date_from": "2026-03-01", "date_to": "2026-05-31"}}
+{"query": "halloween 2025 costumes", "today": "2026-09-26", "semantic": "costumes", "filters": {"date_from": "2025-10-31", "date_to": "2025-10-31"}}
+{"query": "thanksgiving dinner last year", "today": "2026-09-26", "semantic": "dinner", "filters": {"date_from": "2025-11-27", "date_to": "2025-11-30"}}
+{"query": "a menu with prices", "today": "2026-09-26", "semantic": "a menu with prices", "filters": {}}
+{"query": "street signs in Japanese", "today": "2026-09-26", "semantic": "street signs in japanese", "filters": {}}
+{"query": "black and white portraits of Priya", "today": "2026-09-26", "semantic": "black and white portraits", "filters": {"people": ["Priya"]}}
+{"query": "sony a7iii astro", "today": "2026-09-26", "semantic": "astro", "filters": {"camera": "sony"}}
+{"query": "wide angle interiors under 24mm", "today": "2026-09-26", "semantic": "wide angle interiors", "filters": {"focal_max": 24}}
+{"query": "June 2024 in California", "today": "2026-09-26", "semantic": "", "filters": {"place": "California", "date_from": "2024-06-01", "date_to": "2024-06-30"}}
+{"query": "rainy days in Portugal", "today": "2026-09-26", "semantic": "rainy days", "filters": {"place": "Portugal"}}

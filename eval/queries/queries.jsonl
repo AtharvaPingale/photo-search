@@ -1,0 +1,150 @@
+{"id":"q0001","query":"red car","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0002","query":"mountain lake","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0003","query":"dog on a beach","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0004","query":"bicycle leaning against a wall","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0005","query":"sailboats in a harbor","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0006","query":"a bridge over a river","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0007","query":"hot air balloons","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0008","query":"a plate of pasta","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0009","query":"coffee cup on a table","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0010","query":"vintage car","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0011","query":"cat sleeping","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0012","query":"waterfall","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0013","query":"skyline at dusk","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0014","query":"train station platform","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0015","query":"snow covered trees","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0016","query":"a lighthouse","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0017","query":"fireworks","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0018","query":"birthday cake with candles","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0019","query":"tennis court","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0020","query":"a pier at sunset","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0021","query":"cows in a field","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0022","query":"graffiti wall","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0023","query":"empty road through a desert","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0024","query":"farmers market stalls","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0025","query":"kayaks on the water","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0026","query":"a bookshelf","category":"objects","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0027","query":"neon signs","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0028","query":"a cathedral interior","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0029","query":"surfers","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0030","query":"a pumpkin patch","category":"objects","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0031","query":"moody night street","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0032","query":"bright minimal interior","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0033","query":"golden hour portrait","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0034","query":"foggy morning","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0035","query":"rainy window","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0036","query":"long exposure light trails","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0037","query":"black and white street photography","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0038","query":"pastel colors","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0039","query":"silhouette against the sky","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0040","query":"shallow depth of field flowers","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0041","query":"overcast beach","category":"attributes","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0042","query":"dramatic storm clouds","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0043","query":"cozy cafe interior","category":"attributes","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0044","query":"harsh midday shadows","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0045","query":"blue hour city","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0046","query":"symmetrical architecture","category":"attributes","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0047","query":"minimalist landscape","category":"attributes","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0048","query":"warm candlelight","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0049","query":"motion blur","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0050","query":"reflections in puddles","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0051","query":"high contrast portrait","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0052","query":"misty forest","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0053","query":"vibrant autumn leaves","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0054","query":"calm lake at dawn","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0055","query":"crowded market","category":"attributes","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0056","query":"portraits with the 85mm","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0057","query":"photos from Chicago in 2025","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0058","query":"street shots at night with the 35mm","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0059","query":"sunset last summer","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0060","query":"anything from last weekend","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0061","query":"landscapes from 2023","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0062","query":"photos from Japan","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0063","query":"shot on iphone at the beach","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0064","query":"wildlife with the telephoto","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0065","query":"christmas 2024","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0066","query":"food last month","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0067","query":"snow in winter 2024","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0068","query":"concert photos at high iso","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0069","query":"Columbus skyline","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0070","query":"photos from my trip to Paris","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0071","query":"videos from the beach","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0072","query":"vertical photos of buildings","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0073","query":"macro shots at f/2.8","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0074","query":"morning hikes in the fall","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0075","query":"photos from 2019 to 2021 in California","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0076","query":"the first photos on the new camera","category":"metadata","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0077","query":"drone shots","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0078","query":"wide angle interiors under 24mm","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0079","query":"fireworks July 4th","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0080","query":"photos from this spring","category":"metadata","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0081","query":"coffee shop menu","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0082","query":"street sign with a name","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0083","query":"a receipt","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0084","query":"a whiteboard with notes","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0085","query":"train departure board","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0086","query":"book cover","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0087","query":"a museum placard","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0088","query":"handwritten note","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0089","query":"store front with a name","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0090","query":"a poster for a concert","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0091","query":"wine label","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0092","query":"license plate","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0093","query":"airport gate sign","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0094","query":"a map","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0095","query":"a slide from a presentation","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0096","query":"nutrition label","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0097","query":"a boarding pass","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0098","query":"restaurant sign at night","category":"text","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0099","query":"a street mural with words","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0100","query":"a parking sign","category":"text","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0101","query":"me at the beach","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0102","query":"me and my brother","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0103","query":"group photo at dinner","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0104","query":"portrait of mom","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0105","query":"kids playing","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0106","query":"friends hiking","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0107","query":"selfie in front of a landmark","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0108","query":"someone laughing","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0109","query":"wedding photos","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0110","query":"graduation","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0111","query":"me with the dog","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0112","query":"family at the holidays","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0113","query":"couple walking","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0114","query":"people dancing","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0115","query":"a crowd at a concert","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0116","query":"me running","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0117","query":"birthday party","category":"people","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0118","query":"two people on a bench","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0119","query":"team photo","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0120","query":"baby","category":"people","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0121","query":"something that reminds me of home","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0122","query":"the day it snowed indoors","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0123","query":"not a landscape","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0124","query":"sad","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0125","query":"funny photos","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0126","query":"the best photo","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0127","query":"photos I should delete","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0128","query":"blurry photos","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0129","query":"screenshots","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0130","query":"photos of photos","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0131","query":"photos with no people in a city","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0132","query":"a red car that isn't parked","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0133","query":"night but not city","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0134","query":"the ocean from above","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0135","query":"the moon","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0136","query":"an empty chair","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0137","query":"texture","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0138","query":"a door","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0139","query":"chaos","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0140","query":"quiet","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0141","query":"a reflection of me","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0142","query":"shadows of people","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0143","query":"a dog that isn't mine","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0144","query":"a sign in another language","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0145","query":"my old apartment","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0146","query":"the view from a plane window","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0147","query":"food I cooked","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0148","query":"my desk setup","category":"hard","split":"test","relevant":[],"grades":{},"notes":""}
+{"id":"q0149","query":"before and after","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}
+{"id":"q0150","query":"something orange","category":"hard","split":"dev","relevant":[],"grades":{},"notes":""}

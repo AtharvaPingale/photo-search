@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+        args: ["--maxkb=2000"]
+      - id: detect-private-key
+  # ruff/mypy run from the uv env so hooks and `make lint` use the same versions
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types: [python]
+      - id: mypy
+        name: mypy
+        entry: uv run mypy api workers eval training
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: tsc
+        name: tsc (web)
+        entry: sh -c "cd web && npx tsc --noEmit"
+        language: system
+        files: ^web/src/
+        pass_filenames: false

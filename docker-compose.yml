@@ -1,0 +1,170 @@
+# Single home machine. `cp .env.example .env`, set PHOTOS_DIR, then `make up`.
+#
+#   db       Postgres 17 + pgvector
+#   redis    job queue
+#   api      FastAPI + the web app (PWA) on 127.0.0.1:8000 (PS_PORT to change)
+#   worker   GPU jobs: CLIP, captions, OCR, faces (batched)
+#   ingest   CPU jobs: scanning, thumbnails, video frames
+#   watcher  watchdog on the library + auto import from the phone backup folder
+#   backup   nightly pg_dump into ./backups, keeps PS_BACKUP_KEEP_DAYS
+#
+# Nothing listens publicly: the API binds to localhost; reach it from your phone
+# through Tailscale (see README) or set PS_BIND=0.0.0.0 for your home LAN only.
+
+x-app: &app
+  build: .
+  image: photo-search:latest
+  restart: unless-stopped
+  env_file:
+    - path: .env
+      required: false
+  environment:
+    PS_DATABASE_URL: postgresql://photos:${POSTGRES_PASSWORD:-photos}@db:5432/photos
+    PS_REDIS_URL: redis://redis:6379/0
+    PS_DATA_DIR: /data
+    PS_BACKUPS_DIR: /backups
+    PS_PHOTO_ROOTS: '["/photos"]'
+    PS_IMPORT_DIRS: '["/import"]'  # IMPORT_DIR on the host; empty folder if unset
+    PS_IMPORT_DEST: /photos/Imported
+    PS_OLLAMA_URL: ${PS_OLLAMA_URL:-http://host.docker.internal:11434}
+    INSIGHTFACE_HOME: /root/.cache/insightface
+    PADDLE_PDX_CACHE_HOME: /root/.cache/paddlex
+  extra_hosts:
+    - host.docker.internal:host-gateway
+  volumes:
+    - ${PHOTOS_DIR:?set PHOTOS_DIR in .env}:/photos
+    - ${IMPORT_DIR:-./empty-import}:/import
+    - ${DATA_DIR:-./data}:/data
+    - ${BACKUPS_DIR:-./backups}:/backups
+    - ./eval:/app/eval
+    - model-cache:/root/.cache  # Hugging Face, OpenCLIP, InsightFace, PaddleOCR weights
+  depends_on:
+    db:
+      condition: service_healthy
+    redis:
+      condition: service_started
+
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: photos
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-photos}
+      POSTGRES_DB: photos
+    command: ["postgres", "-c", "shared_buffers=1GB", "-c", "maintenance_work_mem=1GB", "-c", "max_parallel_maintenance_workers=4"]
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ${BACKUPS_DIR:-./backups}:/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U photos -d photos"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - redisdata:/data
+
+  migrate:
+    <<: *app
+    restart: "no"
+    command: ["photo-search", "db", "migrate"]
+
+  api:
+    <<: *app
+    command: ["photo-search", "serve", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      PS_DATABASE_URL: postgresql://photos:${POSTGRES_PASSWORD:-photos}@db:5432/photos
+      PS_REDIS_URL: redis://redis:6379/0
+      PS_DATA_DIR: /data
+      PS_BACKUPS_DIR: /backups
+      PS_PHOTO_ROOTS: '["/photos"]'
+      PS_OLLAMA_URL: ${PS_OLLAMA_URL:-http://host.docker.internal:11434}
+      PS_AUTH_TOKEN: ${PS_AUTH_TOKEN:-}
+      PS_DEVICE: ${PS_API_DEVICE:-cpu}  # the text encoder is fast on CPU; leave the GPU to the worker
+    ports:
+      - "${PS_BIND:-127.0.0.1}:${PS_PORT:-8000}:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    <<: *app
+    command: ["photo-search", "worker", "gpu"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  ingest:
+    <<: *app
+    command: ["photo-search", "worker", "ingest"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  watcher:
+    <<: *app
+    # --poll: bind mounts from Docker Desktop / WSL / network shares don't deliver inotify events
+    command: ["photo-search", "watch", "--poll"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  backup:
+    image: pgvector/pgvector:pg17
+    restart: unless-stopped
+    environment:
+      PGHOST: db
+      PGUSER: photos
+      PGPASSWORD: ${POSTGRES_PASSWORD:-photos}
+      PGDATABASE: photos
+      BACKUP_HOUR: ${BACKUP_HOUR:-3}
+      KEEP_DAYS: ${PS_BACKUP_KEEP_DAYS:-14}
+    entrypoint: ["/bin/sh", "/scripts/backup-loop.sh"]
+    volumes:
+      - ${BACKUPS_DIR:-./backups}:/backups
+      - ./scripts:/scripts:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Optional: `docker compose --profile tailscale up -d` puts the app on your tailnet
+  # at https://photos.<tailnet>.ts.net without installing Tailscale on the host.
+  tailscale:
+    profiles: ["tailscale"]
+    image: tailscale/tailscale:latest
+    hostname: photos
+    restart: unless-stopped
+    environment:
+      TS_AUTHKEY: ${TS_AUTHKEY:-}
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_SERVE_CONFIG: /config/serve.json
+      TS_USERSPACE: "true"
+    volumes:
+      - tailscale:/var/lib/tailscale
+      - ./scripts/tailscale-serve.json:/config/serve.json:ro
+
+volumes:
+  pgdata:
+  redisdata:
+  model-cache:
+  tailscale:

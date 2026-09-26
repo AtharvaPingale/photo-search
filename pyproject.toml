@@ -1,0 +1,118 @@
+[project]
+name = "photo-search"
+version = "0.1.0"
+description = "Local, privacy-first natural language search for a personal photo library."
+readme = "README.md"
+authors = [{ name = "Atharva", email = "atharvapingale@gmail.com" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # API + storage
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.9",
+    "psycopg[binary,pool]>=3.2",
+    "pgvector>=0.3",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "typer>=0.12",
+    "rich>=13",
+    "httpx>=0.27",
+    "qrcode>=7.4",
+    # queue + file watching
+    "rq>=2.0",
+    "redis>=5.0",
+    "watchdog>=4.0",
+    # image IO + metadata
+    "pillow>=10.4",
+    "pillow-heif>=0.18",
+    "exifread>=3.0",
+    "rawpy>=0.22",
+    "imagehash>=4.3",
+    # One OpenCV build only. insightface wants opencv-python, paddlex pins
+    # opencv-contrib-python (and checks for it by name), others pull in the
+    # headless build; all of them install into the same cv2/ package and break
+    # each other, so the other two are excluded below.
+    "opencv-contrib-python>=4.10,<5",
+    "imageio-ffmpeg>=0.5",
+    # numerics + models
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "torch>=2.7",
+    "torchvision>=0.22",
+    "open-clip-torch>=2.26",
+    "sentence-transformers>=3.0",
+    "transformers>=4.56",
+    "timm>=1.0",
+    "einops>=0.8",
+    "accelerate>=1.0",
+]
+
+[project.optional-dependencies]
+# PaddleOCR pulls in paddlepaddle (~500 MB). OCR is gated per photo anyway,
+# and everything else works without it.
+ocr = ["paddleocr>=3.7.0", "paddlepaddle>=3.3.1"]
+faces = ["insightface>=0.7.3", "onnxruntime-gpu>=1.20"]
+agent = ["langgraph>=0.2", "langsmith>=0.1", "anthropic>=1.0"]
+tracking = ["mlflow>=2.16"]
+all = ["photo-search[ocr,faces,agent,tracking]"]
+
+[project.scripts]
+photo-search = "api.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-timeout>=2.3",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "pre-commit>=3.8",
+    "pgserver>=0.1.4",
+    "fakeredis>=2.24",
+    "types-redis",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["api", "workers", "training", "eval"]
+
+[tool.uv]
+# See the OpenCV note above. onnxruntime (CPU) would shadow onnxruntime-gpu the same way.
+exclude-dependencies = ["opencv-python", "opencv-python-headless", "onnxruntime"]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["web"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501", "B008", "RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+check_untyped_defs = true
+exclude = ["web/", "build/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "slow: downloads or runs real models (deselect with -m 'not slow')",
+]
+timeout = 300

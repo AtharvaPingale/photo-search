@@ -1,0 +1,7 @@
+{
+  "cameras": ["Canon EOS R6", "Fujifilm X100V", "Apple iPhone 15 Pro", "Sony ILCE-7M3", "DJI Mini 3 Pro"],
+  "lenses": ["RF50mm F1.8 STM", "RF24-70mm F2.8 L IS USM", "FE 85mm F1.8", "Sigma 35mm F1.4 DG HSM", "RF100-400mm F5.6-8 IS USM"],
+  "places": ["Chicago", "Illinois", "Columbus", "Ohio", "United States", "Tokyo", "Kyoto", "Japan", "Paris", "France",
+             "South Lake Tahoe", "California", "Golden", "Colorado", "San Francisco", "New York City", "Lisbon", "Portugal"],
+  "people": ["Rohan", "Priya", "Mom", "me"]
+}

@@ -1,0 +1,25 @@
+{"query": "kids building a sandcastle", "today": "2026-09-26", "semantic": "kids building a sandcastle", "filters": {}}
+{"query": "neon signs in Tokyo", "today": "2026-09-26", "semantic": "neon signs", "filters": {"place": "Tokyo"}}
+{"query": "Priya and Mom at dinner", "today": "2026-09-26", "semantic": "dinner", "filters": {"people": ["Priya", "Mom"]}}
+{"query": "foggy bridge shots from San Francisco", "today": "2026-09-26", "semantic": "foggy bridge", "filters": {"place": "San Francisco"}}
+{"query": "night sky with the Sigma", "today": "2026-09-26", "semantic": "night sky", "filters": {"lens": "sigma"}}
+{"query": "portraits at f/1.4", "today": "2026-09-26", "semantic": "portraits", "filters": {"aperture_min": 1.35, "aperture_max": 1.45}}
+{"query": "photos from March 2026", "today": "2026-09-26", "semantic": "", "filters": {"date_from": "2026-03-01", "date_to": "2026-03-31"}}
+{"query": "snow in Kyoto last winter", "today": "2026-09-26", "semantic": "snow", "filters": {"place": "Kyoto", "date_from": "2025-12-01", "date_to": "2026-02-28"}}
+{"query": "the drone over the lake", "today": "2026-09-26", "semantic": "over the lake", "filters": {"camera": "DJI"}}
+{"query": "Rohan skateboarding", "today": "2026-09-26", "semantic": "skateboarding", "filters": {"people": ["Rohan"]}}
+{"query": "street food in Lisbon", "today": "2026-09-26", "semantic": "street food", "filters": {"place": "Lisbon"}}
+{"query": "dogs this summer", "today": "2026-09-26", "semantic": "dogs", "filters": {"date_from": "2026-06-01", "date_to": "2026-08-31"}}
+{"query": "clips from the concert", "today": "2026-09-26", "semantic": "concert", "filters": {"media": "video"}}
+{"query": "sunrise shot on the X100V in 2024", "today": "2026-09-26", "semantic": "sunrise", "filters": {"camera": "X100V", "date_from": "2024-01-01", "date_to": "2024-12-31"}}
+{"query": "wide shots with the 24-70", "today": "2026-09-26", "semantic": "wide shots", "filters": {"lens": "24-70"}}
+{"query": "sailing in Portugal last year", "today": "2026-09-26", "semantic": "sailing", "filters": {"place": "Portugal", "date_from": "2025-01-01", "date_to": "2025-12-31"}}
+{"query": "handwritten notes", "today": "2026-09-26", "semantic": "handwritten notes", "filters": {}}
+{"query": "Ohio in the fall", "today": "2026-09-26", "semantic": "", "filters": {"place": "Ohio", "months": [9, 10, 11]}}
+{"query": "me at the Eiffel Tower", "today": "2026-09-26", "semantic": "at the eiffel tower", "filters": {"people": ["me"]}}
+{"query": "stars at iso 6400", "today": "2026-09-26", "semantic": "stars", "filters": {"iso_min": 6400, "iso_max": 6400}}
+{"query": "horizontal photos of waterfalls", "today": "2026-09-26", "semantic": "waterfalls", "filters": {"orientation": "landscape"}}
+{"query": "yesterday's hike", "today": "2026-09-26", "semantic": "hike", "filters": {"date_from": "2026-09-25", "date_to": "2026-09-25"}}
+{"query": "christmas lights 2023", "today": "2026-09-26", "semantic": "lights", "filters": {"date_from": "2023-12-24", "date_to": "2023-12-26"}}
+{"query": "birds in flight at 400mm", "today": "2026-09-26", "semantic": "birds in flight", "filters": {"focal_min": 380, "focal_max": 420}}
+{"query": "New York City from above", "today": "2026-09-26", "semantic": "from above", "filters": {"place": "New York City"}}
